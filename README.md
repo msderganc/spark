@@ -190,19 +190,30 @@ Background for curious readers. At runtime the agent follows **R1–R7** in [`re
 
 ### Parked principles (P10, P11, P15)
 
-Optional depth, not required every turn. **P10** — combine distant concepts when stuck (maps to Combine). **P11** — move up/down concreteness without confusing "more abstract" with "more innovative" (maps to Abstraction). **P15** — ground lightly when it helps Solve; don't stall ideation waiting for research (maps to `ground:`).
+These aren't mandatory every turn, but they show up when you steer:
+
+- **P10 — Conceptual combination** — Classic creativity move: mash two things that don't usually sit together (bisociation / Geneplore-style hybridization). In workshops people do this with sticky notes and forced pairs. In Spark, lean on **Combine** (`C+2+5`) or ask for hybrids in plain language when the list feels stuck in one neighborhood.
+- **P11 — Abstraction ladder** — Same idea can live as a concrete feature, a product concept, or a category claim. Designers move up and down that ladder on purpose; "more abstract" is not automatically "more creative." Spark's **Abstraction** dial (`A+` / `A-`) is for that move.
+- **P15 — Ground lightly** — Expertise helps Solve; research theater kills Ideate. Use `ground:repo` when file context would sharpen a constrained problem; otherwise invent freely and keep Uniqueness marked unverified.
 
 ### Named methods
 
-**SCAMPER** — Substitute, Combine, Adapt, Modify, Put to other uses, Eliminate, Reverse: a checklist when you want structured variants.
+Spark doesn't force one brainstorming school. These are common techniques the skill borrows from — what they are outside Spark, and where they show up inside it.
 
-**Morphological analysis** — Break the problem into dimensions and recombine cells to force odd mixes.
+**SCAMPER**  
+A classic checklist from advertising/product work (Bob Eberle, building on Osborn): **S**ubstitute, **C**ombine, **A**dapt, **M**odify (or magnify/minify), **P**ut to other uses, **E**liminate, **R**everse (or rearrange). You walk each operator against the brief to force variants you wouldn't free-associate. In Spark you don't type "SCAMPER," but the pipeline and steers cover the same moves — Combine/Target for C and M-ish deepening, Expansion/Breadth for forcing new buckets, Premise when "reverse the brief" is the real lever. Handy when a shortlist feels samey and you want systematic coverage instead of vibes.
 
-**Cross-domain analogy** — Steal structure from another field to break local fixation.
+**Morphological analysis**  
+Fritz Zwicky's method: list the independent dimensions of a problem (who / channel / timing / pricing / proof…), pick one option per dimension, and recombine into cells you wouldn't have listed top-down. Used in engineering, product discovery, and strategy when the space is combinatorial and intuition only explores one corner. Spark's **category bank + active categories** is the lightweight version — force coverage across lenses, then tag every shortlist item so gaps are visible. Turn **Breadth** (`B+`) up when you need more cells; **Expansion** (`E+`) when one cell is hogging the list.
 
-**Stokes-style constraints** — Tighten or pair constraints so the search stays inventive inside the feasible set — especially in Solve.
+**Cross-domain analogy**  
+Structure-mapping: take a working pattern from a remote domain (airports, kitchens, games, biology) and map roles onto your problem. People use this in design studios and TRIZ-adjacent work to escape local fixation — "we're stuck thinking like a SaaS settings page; what would a night kitchen do?" In Spark, ask for it in free text, or push **Innovation** (`I+`) and category diversity so analogies aren't just metaphors glued on. Good when the Frame is clear but every idea still smells like the competitor's homepage.
 
-**Parallel subagents (`parallel:2`…`5`)** — Off by default. Spawns N different personas (up to ~6 candidates each), merges with dedupe, then scores. Host support:
+**Stokes-style constraints**  
+Patricia Stokes' point: creativity often gets *better* when constraints tighten, not when you remove them — paired or selected constraints catalyze search inside a feasible set. Product and design teams already do this ("ship in a quarter, no new headcount, must work offline"). Spark **Solve** mode is built around that: Frame constraints are fuel for Novelty and Elegance, not excuses to fantasize past the brief. Prefer Solve (or confirm Solve) when the user handed you hard limits; don't "creatively" ignore them.
+
+**Parallel subagents (`parallel:2`…`5`)**  
+Outside Spark, "ensemble" ideation usually means several people (or several model calls) with different roles, then a merge. Spark's version is optional and **single-round**: spawn N short personas that are actually different lenses, each capped at ~6 candidates, merge with near-dup removal, then score. It is **not** a multi-turn debate protocol (people talking for several rounds until they converge). Use it when one voice keeps landing the same centroid; leave it off for quick passes.
 
 | Host | `parallel:` |
 |------|-------------|
@@ -210,7 +221,7 @@ Optional depth, not required every turn. **P10** — combine distant concepts wh
 | **Claude Code** | Same |
 | **Codex** | Depends on config; often falls back |
 
-Fallback: single-agent generation plus a note in Controls. Cost/latency scale roughly with N. This is one parallel round, not a multi-round debate protocol ([`references/research-notes.md`](references/research-notes.md)).
+Fallback: single-agent generation plus a note in Controls. Cost and latency scale roughly with N (`parallel:5` ≈ five generation passes). More on the research hedge: [`references/research-notes.md`](references/research-notes.md).
 
 ---
 
