@@ -1,0 +1,9 @@
+# Design / local only — not part of published skill
+.forge/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
